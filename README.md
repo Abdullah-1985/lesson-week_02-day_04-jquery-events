@@ -17,7 +17,7 @@
 Discuss and experiment with
 - [.hide()](https://api.jquery.com/hide/)
 - [.show()](https://api.jquery.com/show/)
-- [.toggle()](- [.fadeIn()](https://api.jquery.com/toggle/))
+- [.toggle()](https://api.jquery.com/toggle/)
 - [.fadeIn()](https://api.jquery.com/fadeIn/)
 - [.fadeOut()](https://api.jquery.com/fadeOut/)
 - [.slideUp()](https://api.jquery.com/slideUp/)
@@ -46,7 +46,7 @@ If you'd like to see more events, check out the [full list of DOM events](https:
 jQuery has methods we can use for specific events like `.click()`.  However, the preferred way to do events with jQuery is by using the [`.on()`](http://api.jquery.com/on/) method.
 
 ```js
-function printHello = (){
+function printHello () {
     console.log('Hello');
 }
 
@@ -56,7 +56,7 @@ $('h1').on('click', printHello);
 We can combine events and other jQuery methods to build our interactive web pages.
 
 ```js
-function changeBackground = (){
+function changeBackground () {
     $('body').css('background-color', 'red');
 }
 
@@ -65,7 +65,7 @@ $('h1').on('click', changeBackground);
 
 We can listen for hover events:
 ```js
-function increaseFont = (){
+function increaseFont () {
     $('h1').css('font-size', '100px');
 }
 
@@ -81,7 +81,7 @@ We can listen for forms submitting:
 </form>
 ```
 ```js
-function printUserInput = (event){
+function printUserInput (event) {
     event.preventDefault()
     let userInput = $('input:first-child').val();
     console.log(userInput)
